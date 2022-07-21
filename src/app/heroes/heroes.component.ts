@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from '../hero'; // an interface from hero.ts that defines what the hero needs
 
 // links all these files to this component
 //* a decorator function that specifies the angular metadata for the component
@@ -13,11 +14,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  hero = 'Windstorm';
+  // var name: hero, following interface type of Hero
+  hero: Hero = {
+    id:1,
+    name: 'WindStorm'
+  };
 
   constructor() { }
 
-  // runs when initalized
+  // runs when initialized
   ngOnInit(): void {
   }
 
