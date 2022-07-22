@@ -1,8 +1,25 @@
-<h1>{{hero.name | uppercase}} Details</h1> 
-<!-- bound hero property in our HTML from our typeScript class -->
+<h2>Hero list</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes"> 
+        <!-- for loop that loops through every hero on the hero array -->
+        <button type="button">
+            <span class="badge">{{hero.id}}</span>
+            <span class="name">{{hero.name}}</span>
+          </button>
+    </li>
+</ul>
 
-<div><span>id:</span>{{hero.id}}</div>
-<div>
-    <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="hero.name" placeholder="name">
-  </div>
+
+
+
+
+
+<!-- <h1>{{hero.name | uppercase}} Details</h1>  -->
+<!-- *bound hero property in our HTML from our typeScript class -->
+
+<!-- <div><span>id:</span>{{hero.id}}</div> -->
+<!-- <div> -->
+    <!-- <label for="name">Hero name: </label> -->
+    <!-- <input id="name" [(ngModel)]="hero.name" placeholder="name"> -->
+    <!--* ngModel is Angular's two-way data binding syntax. Here it binds hero.name property to the HTML text box so that data can flow in both directions -->
+  <!-- </div> -->
