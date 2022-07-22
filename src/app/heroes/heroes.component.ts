@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero'; // an interface from hero.ts that defines what the hero needs
+import { HEROES } from '../mock-heroes';
 
 // links all these files to this component
 //* a decorator function that specifies the angular metadata for the component
@@ -14,11 +15,14 @@ import { Hero } from '../hero'; // an interface from hero.ts that defines what t
 })
 export class HeroesComponent implements OnInit {
 
-  // var name: hero, following interface type of Hero
-  hero: Hero = {
-    id:1,
-    name: 'WindStorm'
-  };
+
+  heroes = HEROES; //* is equal to the hero list from mock-heroes for binding
+
+  //* var name: hero, following interface type of Hero
+  // hero: Hero = {
+  //   id:1,
+  //   name: 'WindStorm'
+  // };
 
   constructor() { }
 
